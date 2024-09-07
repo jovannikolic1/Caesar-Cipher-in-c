@@ -7,12 +7,13 @@ int main() {
     int expression;
     //do-while for commands in terminal
     do {
+        printf("\n1-encryption\n2-decryption\n");
         scanf("%d",&expression);
         switch (expression) {
             case 1:
-                printf("Please enter a message to encrypt: ");
+                printf("Please enter a message to encrypt: \n");
                 scanf("%s",&text);
-                printf("Please enter the key: ");
+                printf("Please enter the key: \n");
                 scanf("%d",&key);
                 //encryption of input
                 for (int i = 0;text[i]!='\0'; i++)
@@ -29,7 +30,7 @@ int main() {
                           }
                           else
                           {
-                              printf("Invalid character");
+                              printf("\nInvalid character");
                           }
                       }
                       else
@@ -37,13 +38,13 @@ int main() {
                           text[i]=(text[i]-'0'+key)%10+'0';
                       }
                 }
-                printf("Encrypted message: %s",text);
+                printf("\nEncrypted message: %s",text);
                 break;
             case 2:
                 //decryption of input
-                printf("Please enter a message to decrypt: ");
+                printf("\nPlease enter a message to decrypt: ");
                 scanf("%s",&text);
-                printf("Please enter the key: ");
+                printf("\nPlease enter the key: ");
                 scanf("%d",&key);
                 for (int i = 0;text[i]!='\0'; i++)
                 {
@@ -59,7 +60,7 @@ int main() {
                         }
                         else
                         {
-                            printf("Invalid character");
+                            printf("\nInvalid character");
                         }
                     }
                     else
@@ -67,7 +68,7 @@ int main() {
                         text[i]=(text[i]-'0'-key+10)%10+'0';
                     }
                 }
-                printf("Encrypted message: %s",text);
+                printf("\nEncrypted message: %s",text);
 
             case 0:
                break;
